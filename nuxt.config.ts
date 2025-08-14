@@ -1,7 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  css:['~/assets/css/main.css'],
-  modules:['@nuxt/ui', '@nuxt/eslint']
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  css: ['~/assets/css/main.css'],
+
+  modules: ['@nuxt/ui', '@nuxt/eslint'],
+
+  runtimeConfig: {
+    openaiApiKey: '',
+  },
+
+  vite: {
+    optimizeDeps: {
+      include:['debug']
+    }
+  }
 })
