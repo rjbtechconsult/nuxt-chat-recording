@@ -18,5 +18,21 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include:['debug']
     }
+  },
+
+  mdc: {
+    highlight: {
+      theme: {
+        light: 'material-theme-lighter',
+        dark: 'material-theme-palenight'
+      },
+      langs: [
+        'html',
+        'markdown',
+        'vue',
+        'typescript',
+        'javascript',
+      ],
+    },
   }
 })
